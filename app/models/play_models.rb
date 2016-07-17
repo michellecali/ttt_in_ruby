@@ -79,6 +79,16 @@ class Play
 		end
 		return winner
 	end
+
+	def Play.printSquares(boardHash, i)
+		j = boardHash[i]
+		if j == "X" 
+			puts '<p>"X"</p>'
+		elsif j == "Y"
+			puts '<p>"Y"</p>'
+		else puts '<button type="submit" name="squareChosen" value="#{j}"><%= @boardHash["#{j}"] %></button>'
+		end
+	end
 end
 
 # # command line tests
@@ -101,3 +111,12 @@ end
 # c = Play.declareWinner(y)
 # puts "winner"
 # puts c
+# d = Play.printSquares(y, "1")
+# puts "should just put x"
+
+# e = Play.printSquares(y, "3")
+# puts "should put button code"
+
+
+
+
