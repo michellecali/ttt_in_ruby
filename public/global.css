@@ -64,3 +64,13 @@ body {
     50%  {color: blue;}
     100% {color: green;}
 }
+.tieNotice{
+  color: white;
+  font-size: 3em;
+  font-weight: 100;
+  text-align: center;
+}
+.tieNotice__image{
+  height: 400px;
+  width: 400px;
+}

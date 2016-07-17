@@ -5,7 +5,6 @@ MyApp.get "/" do
   @whoseTurn = Play.whoseTurn(@boardHash)
   @winner = Play.declareWinner(@boardHash)
   @tie = Play.declareTie(@boardHash, @winner)
-  binding.pry
   if @winner != "no"
     erb :"/winner"
   elsif @tie != "no"
