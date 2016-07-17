@@ -4,8 +4,12 @@ MyApp.get "/" do
   @boardHash = Play.makeBoardHash(@currentString)
   @whoseTurn = Play.whoseTurn(@boardHash)
   @winner = Play.declareWinner(@boardHash)
+  @tie = Play.declareTie(@boardHash, @winner)
+  binding.pry
   if @winner != "no"
     erb :"/winner"
+  elsif @tie != "no"
+    erb :"/tie"
   else
 	  erb :"/boardForm"
   end

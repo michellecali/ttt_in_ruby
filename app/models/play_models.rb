@@ -33,7 +33,7 @@ class Play
 	def Play.writeNewString(filename, newString)
 		i = newString
 		newFile = File.open(filename, "w")
-		newFile.puts i
+		newFile.print i
 		newFile.close
 	end
 
@@ -54,7 +54,7 @@ class Play
 	def Play.resetNow(filename)
 		j = "0: |1: |2: |3: |4: |5: |6: |7: |8: "
 		resetFile = File.open(filename, "w")
-		resetFile.puts j
+		resetFile.print j
 		resetFile.close
 	end
 
@@ -80,6 +80,17 @@ class Play
 		return winner
 	end
 
+	def Play.declareTie(boardHash, winner)
+		tie = "no"
+		i = boardHash.values
+		j = i.count(" ")
+		if winner == "no" && j == 0
+			tie = "yes"
+		end
+		return tie
+	end
+
+# This formula not currently in use. Will revisit in Story 5
 	def Play.printSquares(boardHash, i)
 		j = boardHash[i]
 		if j == "X" 
@@ -109,13 +120,17 @@ end
 # puts "whoseTurn"
 # puts b
 # c = Play.declareWinner(y)
-# puts "winner"
+# puts "winner?"
 # puts c
 # d = Play.printSquares(y, "1")
 # puts "should just put x"
 
 # e = Play.printSquares(y, "3")
 # puts "should put button code"
+# f = Play.declareTie(y, c)
+# puts "tie?"
+# puts f
+
 
 
 
