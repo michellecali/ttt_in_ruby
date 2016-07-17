@@ -1,0 +1,13 @@
+<div class="winnerNotice">
+	<div class="winnerNotice__congrats">Congratulations to player...</div>
+	<div class="winnerNotice__whichPlayer"><%= @winner %></div>
+</div>
+
+
+<br>
+<br>
+<form action="/reset" method="post" class="resetButton">
+	<button type="submit" name="reset" value="yes">Play Again?</button>
+</form>
+
+<br>

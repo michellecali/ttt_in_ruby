@@ -38,4 +38,29 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.winnerNotice{
+  color: white;
+  font-size: 5em;
+  font-weight: 100;
+  text-align: center;
+}
+.winnerNotice__whichPlayer{
+  -webkit-animation-name: winnerNotice__whichPlayer; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  animation-name: winnerNotice__whichPlayer;
+  animation-duration: 4s;
+}
 
+@-webkit-keyframes winnerNotice__whichPlayer; {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
+@keyframes winnerNotice__whichPlayer {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}

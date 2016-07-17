@@ -3,7 +3,12 @@ MyApp.get "/" do
   @currentString = Play.getCurrentString("boardstatus.txt")
   @boardHash = Play.makeBoardHash(@currentString)
   @whoseTurn = Play.whoseTurn(@boardHash)
-	erb :"/boardForm"
+  @winner = Play.declareWinner(@boardHash)
+  if @winner != "no"
+    erb :"/winner"
+  else
+	  erb :"/boardForm"
+  end
 end
 
 MyApp.post '/boardForm' do

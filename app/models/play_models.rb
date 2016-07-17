@@ -59,7 +59,7 @@ class Play
 	end
 
 	def Play.declareWinner(boardHash)
-		winner = ""
+		winner = "no"
 		i = boardHash.values
 		win = Array.new
 		win[0] = i[0] + i[1] + i[2]
