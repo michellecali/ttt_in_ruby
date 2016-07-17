@@ -57,6 +57,28 @@ class Play
 		resetFile.puts j
 		resetFile.close
 	end
+
+	def Play.declareWinner(boardHash)
+		winner = ""
+		i = boardHash.values
+		win = Array.new
+		win[0] = i[0] + i[1] + i[2]
+		win[1] = i[3] + i[4] + i[5]
+		win[2] = i[6] + i[7] + i[8]
+		win[3] = i[0] + i[3] + i[6]
+		win[4] = i[1] + i[4] + i[7]
+		win[5] = i[2] + i[5] + i[8]
+		win[6] = i[0] + i[4] + i[8]
+		win[7] = i[2] + i[4] + i[6]
+		win.each do |j|
+			if j=="XXX" 
+				winner = "X"
+			elsif j=="OOO"
+				winner = "O"
+			end
+		end
+		return winner
+	end
 end
 
 # # command line tests
@@ -72,7 +94,10 @@ end
 # a = Play.makeNewString(z)
 # puts "new string"
 # puts a
-# # Play.writeNewString("boardstatus.txt", a)
+# Play.writeNewString("boardstatus.txt", a)
 # b = Play.whoseTurn(y)
 # puts "whoseTurn"
 # puts b
+# c = Play.declareWinner(y)
+# puts "winner"
+# puts c
