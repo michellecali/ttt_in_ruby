@@ -1,0 +1,25 @@
+<form action="/boardForm" method="post" class="gameBoard">
+	<input type="hidden" name="whoseTurn" value="<%= @whoseTurn %>">
+	<div class="gameBoard__column">
+		<button type="submit" name="squareChosen" value="0"><%= @boardHash["0"] %></button>
+		<button type="submit" name="squareChosen" value="3"><%= @boardHash["3"] %></button>
+		<button type="submit" name="squareChosen" value="6"><%= @boardHash["6"] %></button>
+	</div>
+	<div class="gameBoard__column">
+		<button type="submit" name="squareChosen" value="1"><%= @boardHash["1"] %></button>
+		<button type="submit" name="squareChosen" value="4"><%= @boardHash["4"] %></button>
+		<button type="submit" name="squareChosen" value="7"><%= @boardHash["7"] %></button>
+	</div>
+	<div class="gameBoard__column">
+		<button type="submit" name="squareChosen" value="2"><%= @boardHash["2"] %></button>
+		<button type="submit" name="squareChosen" value="5"><%= @boardHash["5"] %></button>
+		<button type="submit" name="squareChosen" value="8"><%= @boardHash["8"] %></button>
+	</div>
+</form>
+<br>
+<br>
+<form action="/reset" method="post" class="resetButton">
+	<button type="submit" name="reset" value="yes">Start Over</button>
+</form>
+
+<br>
