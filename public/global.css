@@ -11,6 +11,9 @@ body {
   align-content: center;
   list-style-type: none;
 	background-color: black;
+  color: white;
+  font-weight: 100;
+  text-align: center;
   min-height: 100vh;
 }
 .gameBoard{
@@ -42,7 +45,6 @@ body {
   color: white;
   font-size: 5em;
   font-weight: 100;
-  text-align: center;
 }
 .winnerNotice__whichPlayer{
   -webkit-animation-name: winnerNotice__whichPlayer; /* Chrome, Safari, Opera */
@@ -50,14 +52,12 @@ body {
   animation-name: winnerNotice__whichPlayer;
   animation-duration: 4s;
 }
-
-@-webkit-keyframes winnerNotice__whichPlayer; {
+@-webkit-keyframes winnerNotice__whichPlayer {
     0%   {color: red;}
     25%  {color: yellow;}
     50%  {color: blue;}
     100% {color: green;}
 }
-
 @keyframes winnerNotice__whichPlayer {
     0%   {color: red;}
     25%  {color: yellow;}
@@ -73,4 +73,26 @@ body {
 .tieNotice__image{
   height: 400px;
   width: 400px;
+}
+.personalize__Welcome{
+  font-size: 5em;
+  -webkit-animation-name: personalize__Welcome; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 10s; /* Chrome, Safari, Opera */
+  animation-name: personalize__Welcome;
+  animation-duration: 10s;
+}
+@-webkit-keyframes personalize__Welcome {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+@keyframes personalize__Welcome {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+.personalize__Inputs{
+  font-size: -1em;
 }
